@@ -11,8 +11,12 @@ public class Loader
         String str = reader.readLine();
 
         String[] answer = str.split(" ");
-        System.out.println("Фамилия: " + answer[0]);
-        System.out.println("Имя: " + answer[1]);
-        System.out.println("Отчество: " + answer[2]);
+        if (answer.length == 3) {
+            System.out.println("Фамилия: " + answer[0]);
+            System.out.println("Имя: " + answer[1]);
+            System.out.println("Отчество: " + answer[2]);
+        }else{
+            System.out.println("Вы ввели неправильные данные. Напишите по форме Имя Фамилия Отчество");
+        }
     }
 }

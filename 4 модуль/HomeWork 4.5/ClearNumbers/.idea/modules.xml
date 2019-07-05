@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RegexEnglishText.iml" filepath="$PROJECT_DIR$/RegexEnglishText.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClearNumbers.iml" filepath="$PROJECT_DIR$/ClearNumbers.iml" />
     </modules>
   </component>
 </project>

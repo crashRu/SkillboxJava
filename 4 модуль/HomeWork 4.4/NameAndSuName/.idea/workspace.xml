@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3943dd5-2634-42dd-aefd-3bda894a6b13" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../HomeWork 4.5/RegexEnglishText/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StringCharacters/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StringCharacters/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StringCharacters/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StringCharacters/src/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StringExperiments/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StringExperiments/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StringExperiments/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StringExperiments/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HomeWork 4.5/RegexEnglishText/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HomeWork 4.5/RegexEnglishText/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HomeWork 4.5/RegexEnglishText/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HomeWork 4.5/RegexEnglishText/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HomeWork 4.5/RegexEnglishText/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HomeWork 4.5/RegexEnglishText/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HomeWork 4.5/RegexEnglishText/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HomeWork 4.5/StringExperiments/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HomeWork 4.5/StringExperiments/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HomeWork 4.5/StringExperiments/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HomeWork 4.5/StringExperiments/src/Loader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Loader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="80" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
+            <state relative-caret-position="204">
+              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,6 +76,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -88,7 +94,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -143,7 +148,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18550107" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18763326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -188,8 +193,8 @@
     <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/src/Loader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="80" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
+        <state relative-caret-position="204">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

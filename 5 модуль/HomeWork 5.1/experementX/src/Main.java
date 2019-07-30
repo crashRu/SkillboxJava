@@ -5,19 +5,15 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Введите размер Х");
 		int sizeArray = Integer.parseInt(reader.readLine());
-		char[][] array = new char[sizeArray + 1][sizeArray + 1];
+		char[][] array = new char[sizeArray][sizeArray];
 
 		for (int i = 0; i < array.length; i++) {
 			System.out.println();
-			for (int j = 0; j <= array.length; j++) {
+			for (int j = 0; j < array.length; j++) {
 				if (i == j || j == array.length - i) {
 					array[i][j] = 'X';
-
-				} else if (i == array.length - i) {
-					array[i][j] = 'X';
-					break;
-
 				} else {
 					array[i][j] = ' ';
 				}

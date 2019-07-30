@@ -10,7 +10,7 @@ public class Main {
 
 		for (int i = 0; i < array.length; i++) {
 			System.out.println();
-			for (int j = 0; j <=array.length; j++) {
+			for (int j = 0; j <= array.length; j++) {
 				if (i == j || j == array.length - i) {
 					array[i][j] = 'X';
 

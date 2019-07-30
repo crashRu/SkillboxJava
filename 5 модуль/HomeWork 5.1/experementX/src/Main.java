@@ -10,15 +10,15 @@ public class Main {
 		char[][] array = new char[sizeArray][sizeArray];
 
 		for (int i = 0; i < array.length; i++) {
-			System.out.println();
 			for (int j = 0; j < array.length; j++) {
 				if (i == j || j == array.length - i -1) {
 					array[i][j] = 'X';
 				} else {
 					array[i][j] = ' ';
 				}
-			    System.out.print(array[i][j]);
+				System.out.print(array[i][j]);
 			}
+			System.out.println();
 		}
 	}
 }

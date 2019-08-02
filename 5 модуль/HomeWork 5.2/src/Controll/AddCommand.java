@@ -14,8 +14,9 @@ public class AddCommand implements Command {
 	Pattern patternNoParam = Pattern.compile("^[ADD]{1,}[\\s]+?[\\s]+ [\\w]+");
 	Matcher matcherAdd = patternAdd.matcher(text);
 	Matcher matcherAddNoParam = patternNoParam.matcher(text);
-	boolean isMatcherAddBool = matcherAdd.matches();
-	boolean isMatcherAddNoParamBool = matcherAddNoParam.matches();
+	if(matcherAdd.find()){
+
+	}
 
 	@Override
 	public boolean tryExecute(String user) {

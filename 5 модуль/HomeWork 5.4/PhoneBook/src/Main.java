@@ -7,39 +7,41 @@ public class Main {
 		HashMap<String, String> phoneBook = new HashMap<>();
 		Scanner scanner = new Scanner(System.in);
 		Pattern checkNumber = Pattern.compile("^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$");
-		Pattern checkName = Pattern.compile("^([А-ЯA-Z]|[А-ЯA-Z][\\x27а-яa-z]{1,}|[А-ЯA-Z][\\x27а-яa-z]{1,}\\-([А-ЯA-Z][\\x27а-яa-z]{1,}|(оглы)|(кызы)))\\040[А-ЯA-Z][\\x27а-яa-z]{1,}(\\040[А-ЯA-Z][\\x27а-яa-z]{1,})?$");
+		Pattern checkName = Pattern.compile("^([А-ЯA-Z][\\x27а-яa-z]{1,}|[А-ЯA-Z][\\x27а-яa-z]{1,}\\-([А-ЯA-Z][\\x27а-яa-z]{1,}|(оглы)|(кызы)))\\040[А-ЯA-Z][\\x27а-яa-z]{1,}(\\040[А-ЯA-Z][\\x27а-яa-z]{1,})?$");
 		while (true) {
-			System.out.println("Введите пожалуйста данные о абоненте!");
+			System.out.println("Введите пожалуйста данные о абоненте, в формате: \"Имя фамилия(Имя Фамилия Отчество) или номер телефона\" ");
 			String text = scanner.nextLine();
+			String formatNumber = "^([7|8])?(\\d{3})(\\d{3})(\\d{2})(\\d{2}$)";
 			if (text.equalsIgnoreCase("LIST")) {
 				printBook(phoneBook);
 
 			} else if (checkNumber.matcher(text).find()) {
-				String formatNumber = "^([7|8])?(\\d{3})(\\d{3})(\\d{2})(\\d{2}$)";
-				text = text.replaceAll("\\D", "").replaceFirst(formatNumber, "+7 $2 $3-$4-$5");
-				if (phoneBook.containsValue(text)) {
-					System.out.println("Номер телефона: " + text + " Данные о клиенте: " + searchKey(phoneBook,text));
+				String number  = text.replaceAll("\\D", "").replaceFirst(formatNumber, "+7 $2 $3-$4-$5");
+				if (phoneBook.containsValue(number)) {
+					System.out.println("Номер телефона: " + number + " Данные о клиенте: " + searchKey(phoneBook,number));
 					continue;
 				} else {
-					System.out.println("Введите пожалуйста имя абонента с номером " + text);
+					System.out.println("Введите пожалуйста имя абонента, в формате: \"Имя фамилия(Имя Фамилия Отчество) или номер телефона\"  с номером  " + number);
 					String name = scanner.nextLine();
 					Matcher checkNameMat = checkName.matcher(name);
 					if (checkNameMat.find()) {
-						phoneBook.put(name, text);
+						phoneBook.put(name, number);
 					}
 				}
 			} else if (checkName.matcher(text).find()) {
-				if (phoneBook.containsKey(text)) {
-					System.out.println("Номер телефона: " + phoneBook.get(text) + " Данные о клиенте: " + text);
+				String name = text;
+				if (phoneBook.containsKey(name)) {
+					System.out.println("Номер телефона: " + phoneBook.get(name) + " Данные о клиенте: " + name);
 				} else {
-					System.out.println("Введите пожалуйста номер абонента с именем " + text);
+					System.out.println("Введите пожалуйста номер абонента с именем " + name);
 					String number = scanner.nextLine();
 					if (checkNumber.matcher(number).find()) {
-						phoneBook.put(text, number);
+						number = number.replaceAll("\\D", "").replaceFirst(formatNumber, "+7 $2 $3-$4-$5");
+						phoneBook.put(name, number);
 					}
 				}
 			} else {
-				System.err.println("Вы ввели данные не правильно, ошибка добавления данных ");
+				System.err.println("Вы ввели данные не правильно, ошибка добавления данных \"Принимается формат Имя Фамилия, Имя Фамилия Отчество и номер телефона российского оператора\" ");
 				continue;
 
 			}
@@ -59,6 +61,6 @@ public class Main {
 				return pair.getKey();
 			}
 		}
-		return "!";
+		return null;
 	}
 }

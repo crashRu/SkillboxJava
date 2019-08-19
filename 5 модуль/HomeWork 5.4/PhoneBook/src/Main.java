@@ -18,10 +18,9 @@ public class Main {
 				printBook(phoneBook);
 
 			} else if (checkNumber.matcher(text).find()) {
-				String number = formmatByNumber(text);
+				String number = formatByNumber(text);
 				if (phoneBook.containsValue(number)) {
-					System.out.println(isName(number,findNameByNumber(phoneBook, number)));
-					continue;
+					System.out.println(printNameAndPhone(number,findNameByNumber(phoneBook, number)));
 				} else {
 					System.out.println(printText() + number);
 					String name = scanner.nextLine();
@@ -33,18 +32,17 @@ public class Main {
 			} else if (FULL_NAME_PATTERN.matcher(text).find()) {
 				String name = text;
 				if (phoneBook.containsKey(name)) {
-					System.out.println(isName(phoneBook.get(name),name));
+					System.out.println(printNameAndPhone(phoneBook.get(name),name));
 				} else {
 					System.out.println("Введите пожалуйста номер абонента с именем " + name);
 					String number = scanner.nextLine();
 					if (checkNumber.matcher(number).find()) {
-						number = formmatByNumber(number);
+						number = formatByNumber(number);
 						phoneBook.put(name, number);
 					}
 				}
 			} else {
 				System.err.println("Вы ввели данные не правильно, ошибка добавления данных \"Принимается формат Имя Фамилия, Имя Фамилия Отчество и номер телефона российского оператора\" ");
-				continue;
 
 			}
 		}
@@ -65,13 +63,13 @@ public class Main {
 		return null;
 	}
 
-	private static String formmatByNumber(String number) {
+	private static String formatByNumber(String number) {
 		String formatNumber = "^([7|8])?(\\d{3})(\\d{3})(\\d{2})(\\d{2}$)";
 		number = number.replaceAll("\\D", "").replaceFirst(formatNumber, "+7 $2 $3-$4-$5");
 		return number;
 	}
 
-	private static String isName(String name, String number) {
+	private static String printNameAndPhone(String name, String number) {
 		return "Номер телефона: " + number + " Данные о клиенте: " + name;
 	}
 

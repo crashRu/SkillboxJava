@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class Main {
 	public static void main(String[] args) {
-		ArrayList<String> bookList = new ArrayList<>();
+		ArrayList<String> toDoSheet = new ArrayList<>();
 		Pattern pattern = Pattern.compile("([A-Z]{3,6})\\s?(?<indexList>\\d*)\\s?" +
 				"(?<text>[А-Яа-я\\w\\s!?:;.\\-,]*)");
 		Scanner scanner = new Scanner(System.in);
@@ -28,16 +28,16 @@ public class Main {
 				boolean exit = false;
 				switch (nameTeam) {
 					case "ADD":
-						addToList(bookList, position, nameCase);
+						addToList(toDoSheet, position, nameCase);
 						break;
 					case "EDIT":
-						replaceListItem(bookList, position, nameCase);
+						replaceListItem(toDoSheet, position, nameCase);
 						break;
 					case "LIST":
-						outputListItems(bookList);
+						outputListItems(toDoSheet);
 						break;
 					case "DELETE":
-						deleteListItem(bookList, position);
+						deleteListItem(toDoSheet, position);
 						break;
 					case "EXIT":
 						exit = true;

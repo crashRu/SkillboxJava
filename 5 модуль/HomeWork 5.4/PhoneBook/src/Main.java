@@ -29,7 +29,7 @@ public class Main {
                         phoneBook.put(name, number);
                     }
                 }
-            } else if (FULL_NAME_PATTERN.matcher(text).find()) {
+            } else if (isName(text)) {
                 String name = text;
                 if (phoneBook.containsKey(name)) {
                     System.out.println(printNameAndPhone(phoneBook.get(name), name));
